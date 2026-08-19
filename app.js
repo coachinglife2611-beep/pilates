@@ -44,16 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Load translations and initialize translation UI
-  fetch('./translations.json')
-    .then(response => response.json())
-    .then(data => {
-      translations = data;
-      setLanguage(currentLang);
-    })
-    .catch(error => {
-      console.error('Error loading translations:', error);
-    });
+  // Load translations from translations.js global object
+  if (window.translations) {
+    translations = window.translations;
+    setLanguage(currentLang);
+  } else {
+    console.error('Translations object not found');
+  }
 
   // Handle language selectors click
   document.querySelectorAll('.btn-lang').forEach(btn => {
