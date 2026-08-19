@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #2D3748;
+    background-color: #FAFAF9;
+    line-height: 1.6;
+  }
+  
+  /* Header / Navegación */
+  .navbar {
+    background-color: #FFFFFF;
+    padding: 18px 40px;
+    border-bottom: 1px solid #E2E8F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 16pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #1A202C;
+    text-transform: uppercase;
+  }
+  .logo span {
+    color: #7C9082;
+    font-weight: 300;
+  }
+  .btn-nav {
+    background-color: #7C9082;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 9.5pt;
+    transition: background 0.3s;
+  }
+  .btn-nav:hover {
+    background-color: #647568;
+  }
+
+  /* Hero Section */
+  .hero {
+    background-color: #F4F6F4;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  .hero-tag {
+    color: #7C9082;
+    font-size: 9pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .hero h1 {
+    font-size: 26pt;
+    color: #1A202C;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+  }
+  .hero p {
+    font-size: 11.5pt;
+    color: #4A5568;
+    max-width: 580px;
+    margin: 0 auto 25px auto;
+  }
+  .btn-primary {
+    background-color: #7C9082;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 10pt;
+    display: inline-block;
+    margin: 5px;
+  }
+
+  /* Secciones & Grillas */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 16pt;
+    color: #2D3748;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+  }
+  .card-left {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 22px;
+    text-align: left;
+  }
+  .feature-num {
+    font-size: 20pt;
+    font-weight: 700;
+    color: #7C9082;
+    margin-bottom: 5px;
+  }
+  .card h4, .card-left h3 {
+    margin: 8px 0;
+    color: #1A202C;
+  }
+  .card p, .card-left p {
+    font-size: 9pt;
+    color: #718096;
+    margin: 0;
+  }
+
+  /* Team */
+  .team-role {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #7C9082;
+    text-transform: uppercase;
+  }
+  .team-name {
+    font-size: 11pt;
+    font-weight: 600;
+    color: #2D3748;
+    margin: 4px 0;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #1A202C;
+    color: #A0AEC0;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 8.5pt;
+  }
+  .footer-logo {
+    color: white;
+    font-size: 13pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Navegación -->
+  <div class="navbar">
+    <div class="logo">Bless <span>Pilates</span></div>
+    <a href="#reservas" class="btn-nav">Reservar Clase</a>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-tag">Boutique Pilates Studio</div>
+    <h1>Transforma tu Cuerpo y Mente</h1>
+    <p>Un espacio exclusivo dedicado al bienestar holístico con atención 100% personalizada y grupos reducidos.</p>
+    <a href="#planes" class="btn-primary">Ver Planes y Membresías</a>
+  </div>
+
+  <!-- ¿Por Qué Elegirnos? -->
+  <div class="container">
+    <div class="section-title">¿Por Qué Elegir Bless Pilates?</div>
+    <div class="grid-4">
+      <div class="card">
+        <div class="feature-num">Máx 6</div>
+        <h4>Alumnos por Clase</h4>
+        <p>Atención personalizada para asegurar té
