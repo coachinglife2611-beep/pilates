@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bless Pilates - Boutique Pilates Studio dedicado al bienestar holístico. Clases personalizadas con grupos reducidos de máximo 6 alumnos en un ambiente exclusivo.">
+  <meta name="description" id="meta-description" content="Bless Pilates - Boutique Pilates Studio dedicado al bienestar holístico. Clases personalizadas con grupos reducidos de máximo 6 alumnos en un ambiente exclusivo.">
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Bless Pilates | Boutique Pilates Studio">
-  <meta property="og:description" content="Transforma tu cuerpo y mente. Clases personalizadas y grupos reducidos para cuidar de tu bienestar holístico.">
+  <meta property="og:title" id="og-title" content="Bless Pilates | Boutique Pilates Studio">
+  <meta property="og:description" id="og-description" content="Transforma tu cuerpo y mente. Clases personalizadas y grupos reducidos para cuidar de tu bienestar holístico.">
   <meta property="og:image" content="https://blesspilates.com/assets/og-image.jpg">
   <meta property="og:url" content="https://blesspilates.com">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Bless Pilates | Boutique Pilates Studio">
-  <meta property="twitter:description" content="Transforma tu cuerpo y mente. Clases personalizadas y grupos reducidos.">
+  <meta property="twitter:title" id="twitter-title" content="Bless Pilates | Boutique Pilates Studio">
+  <meta property="twitter:description" id="twitter-description" content="Transforma tu cuerpo y mente. Clases personalizadas y grupos reducidos.">
   <meta property="twitter:image" content="https://blesspilates.com/assets/og-image.jpg">
   
-  <title>Bless Pilates | Boutique Pilates Studio</title>
+  <title id="doc-title">Bless Pilates | Boutique Pilates Studio</title>
   
   <!-- Canonical Link -->
   <link rel="canonical" href="https://blesspilates.com">
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="./style.css">
   
   <!-- JSON-LD LocalBusiness Schema -->
-  <script type="application/ld+json">
+  <script type="application/ld+json" id="structured-data">
     {
       "@context": "https://schema.org",
       "@type": "SportsActivityLocation",
@@ -84,13 +84,20 @@
     <nav class="navbar" id="navbar">
       <a href="#" class="logo">Bless <span>Pilates</span></a>
       
-      <!-- Desktop Navigation Links -->
-      <div class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#elegirnos">Por Qué Elegirnos</a>
-        <a href="#clases">Clases</a>
-        <a href="#planes">Planes</a>
-        <a href="#contacto" class="btn-nav">Reservar Clase</a>
+      <!-- Desktop Navigation Links & Language Switcher -->
+      <div class="nav-links" style="display: flex; align-items: center; gap: 20px;">
+        <a href="#inicio" data-i18n="nav.home">Inicio</a>
+        <a href="#elegirnos" data-i18n="nav.whyUs">Por Qué Elegirnos</a>
+        <a href="#clases" data-i18n="nav.classes">Clases</a>
+        <a href="#planes" data-i18n="nav.pricing">Planes</a>
+        
+        <!-- Language buttons for desktop -->
+        <div class="lang-selector">
+          <button class="btn-lang" data-lang="es" aria-label="Cambiar a Español">ES</button>
+          <button class="btn-lang" data-lang="en" aria-label="Switch to English">EN</button>
+        </div>
+        
+        <a href="#contacto" class="btn-nav" data-i18n="nav.cta">Reservar Clase</a>
       </div>
       
       <!-- Mobile Hamburger Toggle -->
@@ -103,11 +110,17 @@
     
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav" id="mobile-nav">
-      <a href="#inicio">Inicio</a>
-      <a href="#elegirnos">Por Qué Elegirnos</a>
-      <a href="#clases">Clases</a>
-      <a href="#planes">Planes</a>
-      <a href="#contacto" class="btn-nav">Reservar Clase</a>
+      <!-- Language Selector for mobile -->
+      <div class="lang-selector" style="margin-bottom: 10px; justify-content: center;">
+        <button class="btn-lang" data-lang="es">ES</button>
+        <button class="btn-lang" data-lang="en">EN</button>
+      </div>
+      
+      <a href="#inicio" data-i18n="nav.home">Inicio</a>
+      <a href="#elegirnos" data-i18n="nav.whyUs">Por Qué Elegirnos</a>
+      <a href="#clases" data-i18n="nav.classes">Clases</a>
+      <a href="#planes" data-i18n="nav.pricing">Planes</a>
+      <a href="#contacto" class="btn-nav" data-i18n="nav.cta">Reservar Clase</a>
     </div>
   </header>
 
@@ -115,12 +128,12 @@
     <!-- Hero Section -->
     <section class="hero" id="inicio">
       <div class="container">
-        <span class="hero-tag">Boutique Pilates Studio</span>
-        <h1>Transforma tu Cuerpo y Mente</h1>
-        <p>Un espacio exclusivo dedicado al bienestar holístico con atención 100% personalizada y grupos reducidos para conectar contigo.</p>
+        <span class="hero-tag" data-i18n="hero.tag">Boutique Pilates Studio</span>
+        <h1 data-i18n="hero.title">Transforma tu Cuerpo y Mente</h1>
+        <p data-i18n="hero.desc">Un espacio exclusivo dedicado al bienestar holístico con atención 100% personalizada y grupos reducidos para conectar contigo.</p>
         <div class="hero-buttons">
-          <a href="#planes" class="btn-primary">Ver Planes y Membresías</a>
-          <a href="#contacto" class="btn-outline">Reservar Clase de Prueba</a>
+          <a href="#planes" class="btn-primary" data-i18n="hero.btnPlans">Ver Planes y Membresías</a>
+          <a href="#contacto" class="btn-outline" data-i18n="hero.btnTrial">Clase de Prueba</a>
         </div>
       </div>
     </section>
@@ -129,33 +142,31 @@
     <section class="section" id="elegirnos">
       <div class="container">
         <div class="section-header">
-          <span class="section-subtitle">Tu Bienestar Primero</span>
-          <h2 class="section-title">¿Por Qué Elegir Bless Pilates?</h2>
+          <span class="section-subtitle" data-i18n="whyChooseUs.subtitle">Tu Bienestar Primero</span>
+          <h2 class="section-title" data-i18n="whyChooseUs.title">¿Por Qué Elegir Bless Pilates?</h2>
         </div>
         
         <div class="grid-3">
           <div class="card">
-            <div class="feature-num">Máx 6</div>
-            <h3>Alumnos por Clase</h3>
-            <p>Atención personalizada para asegurar la técnica correcta, prevenir lesiones y optimizar cada uno de tus movimientos.</p>
+            <div class="feature-num" data-i18n="whyChooseUs.card1.num">Máx 6</div>
+            <h3 data-i18n="whyChooseUs.card1.title">Alumnos por Clase</h3>
+            <p data-i18n="whyChooseUs.card1.desc">Atención personalizada para asegurar la técnica correcta, prevenir lesiones y optimizar cada uno de tus movimientos.</p>
           </div>
           
           <div class="card">
             <div class="card-icon">
-              <!-- Certified Trainer Icon SVG -->
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <h3>Instructores Certificados</h3>
-            <p>Guiado por profesionales apasionados del movimiento que adaptan cada ejercicio a tus capacidades y objetivos.</p>
+            <h3 data-i18n="whyChooseUs.card2.title">Instructores Certificados</h3>
+            <p data-i18n="whyChooseUs.card2.desc">Guiado por profesionales apasionados del movimiento que adaptan cada ejercicio a tus capacidades y objetivos.</p>
           </div>
 
           <div class="card">
             <div class="card-icon">
-              <!-- Wellness/Spiritual Icon SVG -->
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
             </div>
-            <h3>Bienestar Holístico</h3>
-            <p>Enfoque integral en la conexión mente-cuerpo, respiración controlada y fuerza del núcleo muscular (Powerhouse).</p>
+            <h3 data-i18n="whyChooseUs.card3.title">Bienestar Holístico</h3>
+            <p data-i18n="whyChooseUs.card3.desc">Enfoque integral en la conexión mente-cuerpo, respiración controlada y fuerza del núcleo muscular (Powerhouse).</p>
           </div>
         </div>
       </div>
@@ -166,14 +177,14 @@
       <div class="container">
         <div class="split-layout">
           <div class="split-content">
-            <span class="section-subtitle">El Estudio</span>
-            <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 20px;">Un Santuario de Calma y Fuerza</h2>
-            <p>En Bless Pilates diseñamos una experiencia boutique única. Olvídate de los gimnasios ruidosos y concurridos. Nuestro estudio está diseñado con luz natural, colores armoniosos y equipamiento de última generación para brindarte la máxima comodidad.</p>
-            <p>Cada sesión combina ejercicios clásicos y contemporáneos que fortalecen la musculatura profunda, aumentan la flexibilidad y mejoran la postura para el día a día.</p>
-            <a href="#contacto" class="btn-primary" style="margin-top: 10px;">Conocer el Estudio</a>
+            <span class="section-subtitle" data-i18n="studio.subtitle">El Estudio</span>
+            <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 20px;" data-i18n="studio.title">Un Santuario de Calma y Fuerza</h2>
+            <p data-i18n="studio.p1">En Bless Pilates diseñamos una experiencia boutique única. Olvídate de los gimnasios ruidosos y concurridos. Nuestro estudio está diseñado con luz natural, colores armoniosos y equipamiento de última generación para brindarte la máxima comodidad.</p>
+            <p data-i18n="studio.p2">Cada sesión combina ejercicios clásicos y contemporáneos que fortalecen la musculatura profunda, aumentan la flexibilidad y mejoran la postura para el día a día.</p>
+            <a href="#contacto" class="btn-primary" style="margin-top: 10px;" data-i18n="studio.btnDiscover">Conocer el Estudio</a>
           </div>
           <div class="split-image">
-            <span style="font-family: var(--font-title); font-size: 1.5rem; font-style: italic; opacity: 0.8;">Atmósfera de Paz e Inspiración</span>
+            <span style="font-family: var(--font-title); font-size: 1.5rem; font-style: italic; opacity: 0.8;" data-i18n="studio.placeholder">Atmósfera de Paz e Inspiración</span>
           </div>
         </div>
       </div>
@@ -183,22 +194,22 @@
     <section class="section" id="clases">
       <div class="container">
         <div class="section-header">
-          <span class="section-subtitle">Nuestras Clases</span>
-          <h2 class="section-title">Encuentra Tu Estilo de Movimiento</h2>
+          <span class="section-subtitle" data-i18n="classes.subtitle">Nuestras Clases</span>
+          <h2 class="section-title" data-i18n="classes.title">Encuentra Tu Estilo de Movimiento</h2>
         </div>
         
         <div class="grid-3">
           <div class="card">
-            <h3>Pilates Reformer</h3>
-            <p>Clases en la emblemática camilla Reformer. Mejora la resistencia y fuerza muscular usando poleas y resortes que ofrecen soporte o resistencia.</p>
+            <h3 data-i18n="classes.class1.title">Pilates Reformer</h3>
+            <p data-i18n="classes.class1.desc">Clases en la emblemática camilla Reformer. Mejora la resistencia y fuerza muscular usando poleas y resortes que ofrecen soporte o resistencia.</p>
           </div>
           <div class="card">
-            <h3>Pilates Mat (Colchoneta)</h3>
-            <p>Ejercicios dinámicos enfocados en el control del peso corporal y accesorios como aros, bandas y balones para fortalecer el centro.</p>
+            <h3 data-i18n="classes.class2.title">Pilates Mat (Colchoneta)</h3>
+            <p data-i18n="classes.class2.desc">Ejercicios dinámicos enfocados en el control del peso corporal y accesorios como aros, bandas y balones para fortalecer el centro.</p>
           </div>
           <div class="card">
-            <h3>Pilates Clínico / Postural</h3>
-            <p>Sesiones enfocadas en la rehabilitación de lesiones, corrección de desviaciones posturales e incremento de la salud de la columna vertebral.</p>
+            <h3 data-i18n="classes.class3.title">Pilates Clínico / Postural</h3>
+            <p data-i18n="classes.class3.desc">Sesiones enfocadas en la rehabilitación de lesiones, corrección de desviaciones posturales e incremento de la salud de la columna vertebral.</p>
           </div>
         </div>
       </div>
@@ -208,54 +219,54 @@
     <section class="section-alt" id="planes">
       <div class="container">
         <div class="section-header">
-          <span class="section-subtitle">Membresías</span>
-          <h2 class="section-title">Planes Flexibles para Ti</h2>
+          <span class="section-subtitle" data-i18n="pricing.subtitle">Membresías</span>
+          <h2 class="section-title" data-i18n="pricing.title">Planes Flexibles para Ti</h2>
         </div>
         
         <div class="grid-3">
           <!-- Plan 1 -->
           <div class="price-card">
-            <h3>Plan Esencial</h3>
-            <div class="price-amount">$45<span>/mes</span></div>
-            <p class="price-desc">Ideal para iniciarse o complementar tu entrenamiento habitual.</p>
+            <h3 data-i18n="pricing.plan1.title">Plan Esencial</h3>
+            <div class="price-amount"><span data-i18n="pricing.plan1.price">$45</span><span data-i18n="pricing.plan1.period">/mes</span></div>
+            <p class="price-desc" data-i18n="pricing.plan1.desc">Ideal para iniciarse o complementar tu entrenamiento habitual.</p>
             <ul class="price-features">
-              <li>1 Clase por semana</li>
-              <li>Máximo 6 personas por sesión</li>
-              <li>Acceso a reservas en línea</li>
-              <li>Asesoramiento postural básico</li>
+              <li data-i18n="pricing.plan1.f1">1 Clase por semana</li>
+              <li data-i18n="pricing.plan1.f2">Máximo 6 personas por sesión</li>
+              <li data-i18n="pricing.plan1.f3">Acceso a reservas en línea</li>
+              <li data-i18n="pricing.plan1.f4">Asesoramiento postural básico</li>
             </ul>
-            <a href="#contacto" class="btn-primary">Empezar Ahora</a>
+            <a href="#contacto" class="btn-primary" data-i18n="pricing.btn">Empezar Ahora</a>
           </div>
           
           <!-- Plan 2 (Popular) -->
           <div class="price-card popular">
-            <span class="badge">Recomendado</span>
-            <h3>Plan Equilibrio</h3>
-            <div class="price-amount">$75<span>/mes</span></div>
-            <p class="price-desc">El plan más elegido para ver resultados óptimos y consistentes.</p>
+            <span class="badge" data-i18n="pricing.recommended">Recomendado</span>
+            <h3 data-i18n="pricing.plan2.title">Plan Equilibrio</h3>
+            <div class="price-amount"><span data-i18n="pricing.plan2.price">$75</span><span data-i18n="pricing.plan2.period">/mes</span></div>
+            <p class="price-desc" data-i18n="pricing.plan2.desc">El plan más elegido para ver resultados óptimos y consistentes.</p>
             <ul class="price-features">
-              <li>2 Clases por semana</li>
-              <li>Máximo 6 personas por sesión</li>
-              <li>Acceso a reservas en línea</li>
-              <li>Seguimiento de progreso postural</li>
-              <li>Clases recuperables</li>
+              <li data-i18n="pricing.plan2.f1">2 Clases por semana</li>
+              <li data-i18n="pricing.plan2.f2">Máximo 6 personas por sesión</li>
+              <li data-i18n="pricing.plan2.f3">Acceso a reservas en línea</li>
+              <li data-i18n="pricing.plan2.f4">Seguimiento de progreso postural</li>
+              <li data-i18n="pricing.plan2.f5">Clases recuperables</li>
             </ul>
-            <a href="#contacto" class="btn-primary">Empezar Ahora</a>
+            <a href="#contacto" class="btn-primary" data-i18n="pricing.btn">Empezar Ahora</a>
           </div>
           
           <!-- Plan 3 -->
           <div class="price-card">
-            <h3>Plan Intensivo</h3>
-            <div class="price-amount">$95<span>/mes</span></div>
-            <p class="price-desc">Perfecto para una transformación integral del cuerpo y mente.</p>
+            <h3 data-i18n="pricing.plan3.title">Plan Intensivo</h3>
+            <div class="price-amount"><span data-i18n="pricing.plan3.price">$95</span><span data-i18n="pricing.plan3.period">/mes</span></div>
+            <p class="price-desc" data-i18n="pricing.plan3.desc">Perfecto para una transformación integral del cuerpo y mente.</p>
             <ul class="price-features">
-              <li>3 Clases por semana</li>
-              <li>Máximo 6 personas por sesión</li>
-              <li>Prioridad en reservas de horarios</li>
-              <li>Seguimiento detallado</li>
-              <li>Acceso a eventos exclusivos</li>
+              <li data-i18n="pricing.plan3.f1">3 Clases por semana</li>
+              <li data-i18n="pricing.plan3.f2">Máximo 6 personas por sesión</li>
+              <li data-i18n="pricing.plan3.f3">Prioridad en reservas de horarios</li>
+              <li data-i18n="pricing.plan3.f4">Seguimiento detallado</li>
+              <li data-i18n="pricing.plan3.f5">Acceso a eventos exclusivos</li>
             </ul>
-            <a href="#contacto" class="btn-primary">Empezar Ahora</a>
+            <a href="#contacto" class="btn-primary" data-i18n="pricing.btn">Empezar Ahora</a>
           </div>
         </div>
       </div>
@@ -265,22 +276,22 @@
     <section class="section" id="contacto">
       <div class="container">
         <div class="section-header">
-          <span class="section-subtitle">Únete a Nosotros</span>
-          <h2 class="section-title">Reserva Tu Clase o Escríbenos</h2>
+          <span class="section-subtitle" data-i18n="contact.subtitle">Únete a Nosotros</span>
+          <h2 class="section-title" data-i18n="contact.title">Reserva Tu Clase o Escríbenos</h2>
         </div>
         
         <div class="contact-grid">
           <!-- Info Details -->
           <div class="contact-info">
-            <h3>Contacto</h3>
-            <p style="margin-bottom: 30px;">Estamos listos para guiarte en tu viaje hacia el bienestar. Escríbenos, llámanos o visítanos.</p>
+            <h3 data-i18n="contact.cardTitle">Contacto</h3>
+            <p style="margin-bottom: 30px;" data-i18n="contact.cardDesc">Estamos listos para guiarte en tu viaje hacia el bienestar. Escríbenos, llámanos o visítanos.</p>
             
             <div class="info-item">
               <div class="info-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div class="info-text">
-                <h4>Dirección</h4>
+                <h4 data-i18n="contact.addrTitle">Dirección</h4>
                 <p>Av. del Libertador 1500, Buenos Aires, Argentina</p>
               </div>
             </div>
@@ -290,7 +301,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               </div>
               <div class="info-text">
-                <h4>Teléfono</h4>
+                <h4 data-i18n="contact.phoneTitle">Teléfono</h4>
                 <p>+54 9 11 2345-6789</p>
               </div>
             </div>
@@ -300,7 +311,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
               <div class="info-text">
-                <h4>Correo Electrónico</h4>
+                <h4 data-i18n="contact.emailTitle">Correo Electrónico</h4>
                 <p>info@blesspilates.com</p>
               </div>
             </div>
@@ -308,30 +319,30 @@
           
           <!-- Contact Form -->
           <div class="contact-form">
-            <h3>Envíanos un Mensaje</h3>
-            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Gracias! Nos pondremos en contacto contigo a la brevedad.');">
+            <h3 data-i18n="contact.formTitle">Envíanos un Mensaje</h3>
+            <form id="contact-form-el" action="#" method="POST">
               <div class="form-group">
-                <label for="name">Nombre Completo</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Ingresa tu nombre" required>
+                <label for="name" data-i18n="contact.lblFullName">Nombre Completo</label>
+                <input type="text" id="name" name="name" class="form-control" data-i18n-placeholder="contact.phFullName" placeholder="Ingresa tu nombre" required>
               </div>
               <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="ejemplo@correo.com" required>
+                <label for="email" data-i18n="contact.lblEmail">Correo Electrónico</label>
+                <input type="email" id="email" name="email" class="form-control" data-i18n-placeholder="contact.phEmail" placeholder="ejemplo@correo.com" required>
               </div>
               <div class="form-group">
-                <label for="plan-select">Plan de Interés</label>
+                <label for="plan-select" data-i18n="contact.lblPlan">Plan de Interés</label>
                 <select id="plan-select" name="plan" class="form-control">
-                  <option value="esencial">Plan Esencial (1 clase/sem)</option>
-                  <option value="equilibrio" selected>Plan Equilibrio (2 clases/sem)</option>
-                  <option value="intensivo">Plan Intensivo (3 clases/sem)</option>
-                  <option value="otro">Consulta General / Clase de Prueba</option>
+                  <option value="esencial" data-i18n="contact.optPlan1">Plan Esencial (1 clase/sem)</option>
+                  <option value="equilibrio" selected data-i18n="contact.optPlan2">Plan Equilibrio (2 clases/sem)</option>
+                  <option value="intensivo" data-i18n="contact.optPlan3">Plan Intensivo (3 clases/sem)</option>
+                  <option value="otro" data-i18n="contact.optPlan4">Consulta General / Clase de Prueba</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="message">Mensaje</label>
-                <textarea id="message" name="message" rows="4" class="form-control" placeholder="Cuéntanos un poco sobre ti o tus dudas..." required></textarea>
+                <label for="message" data-i18n="contact.lblMessage">Mensaje</label>
+                <textarea id="message" name="message" rows="4" class="form-control" data-i18n-placeholder="contact.phMessage" placeholder="Cuéntanos un poco sobre ti o tus dudas..." required></textarea>
               </div>
-              <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Enviar Solicitud</button>
+              <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;" data-i18n="contact.btnSubmit">Enviar Solicitud</button>
             </form>
           </div>
         </div>
@@ -345,19 +356,19 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <h2>Bless <span>Pilates</span></h2>
-          <p style="color: #A0AEC0; font-size: 0.85rem;">Boutique Pilates Studio dedicado a guiarte en una transformación física y mental completa mediante la atención al detalle.</p>
+          <p style="color: #A0AEC0; font-size: 0.85rem;" data-i18n="footer.desc">Boutique Pilates Studio dedicado a guiarte en una transformación física y mental completa mediante la atención al detalle.</p>
         </div>
         <div class="footer-links">
-          <h3>Navegación</h3>
+          <h3 data-i18n="footer.navTitle">Navegación</h3>
           <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#elegirnos">Por Qué Elegirnos</a></li>
-            <li><a href="#clases">Clases</a></li>
-            <li><a href="#planes">Planes</a></li>
+            <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="#elegirnos" data-i18n="nav.whyUs">Por Qué Elegirnos</a></li>
+            <li><a href="#clases" data-i18n="nav.classes">Clases</a></li>
+            <li><a href="#planes" data-i18n="nav.pricing">Planes</a></li>
           </ul>
         </div>
         <div class="footer-links">
-          <h3>Contacto</h3>
+          <h3 data-i18n="footer.contactTitle">Contacto</h3>
           <ul>
             <li><a href="tel:+5491123456789">+54 9 11 2345-6789</a></li>
             <li><a href="mailto:info@blesspilates.com">info@blesspilates.com</a></li>
@@ -366,7 +377,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Bless Pilates Studio. Todos los derechos reservados. | Sitio optimizado para SEO.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 Bless Pilates Studio. Todos los derechos reservados. | Sitio optimizado para SEO.</p>
       </div>
     </div>
   </footer>

@@ -178,6 +178,38 @@ p {
   box-shadow: 0 6px 15px rgba(124, 144, 130, 0.3);
 }
 
+/* Language Selector */
+.lang-selector {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.btn-lang {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--neutral-light);
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: var(--transition-smooth);
+}
+
+.btn-lang:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-lang.active {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+
 /* Hero Section */
 .hero {
   padding: 140px 20px 80px;
